@@ -23,11 +23,9 @@ public class MainFrame {
 	public static JPanel deck;
 	private Home home;
 	private AdminLogin adminLogin;
-	private CandidateList candidateList;
 	// - - > CARD LABELS
 	public static String homeCard = "HOME";
 	public static String adminLoginCard = "ADMINLOGIN"; 
-	public static String candidateListCard = "CANDIDATELIST";
 	
 	public MainFrame() {
 		mainFrame = new JFrame();
@@ -40,13 +38,11 @@ public class MainFrame {
 		// INITIALIZE CUSTOM PANELS
 		home = new Home();
 		adminLogin = new AdminLogin();
-		candidateList = new CandidateList();
 		
 		// STACK AND ADD PAGES HERE
 		deck = new JPanel(new CardLayout()); // CARDLAYOUT AS NAVIGATION TOOL
 		deck.add(home, homeCard); 
 		deck.add(adminLogin, adminLoginCard);
-		deck.add(candidateList, candidateListCard);
 		
 		mainFrame.getContentPane().add(deck, BorderLayout.CENTER);
 		mainFrame.setVisible(true);
