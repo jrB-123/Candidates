@@ -26,7 +26,7 @@ public class AdminList extends JPanel{
 		
 		JLabel mastText = new JLabel("ADMIN CANDIDATES LIST");
 		mastText.setFont(new Font("Arial", Font.BOLD, 25));
-		
+		 
 		upperPanel.add(mastText);
 		this.add(upperPanel, BorderLayout.PAGE_START);
 		
