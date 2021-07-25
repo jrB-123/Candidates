@@ -83,12 +83,15 @@ public class Home extends JPanel implements ActionListener { // STARTING PAGE
 	public void actionPerformed(ActionEvent e) { // BUTTONS ACTION LISTENER
 		// TODO Auto-generated method stub
 		if(e.getSource().equals(adminButton)) { // go to admin login page
-			System.out.println("ADMIN CLICKED!");
+			System.out.println("ADMIN CLICKED");
 			
 			MainFrame.mainFrame.setResizable(true);
 			MainFrame.mainFrame.setSize(600, 400);
 			CardLayout cl = (CardLayout) MainFrame.deck.getLayout();
 			cl.show(MainFrame.deck, MainFrame.adminLoginCard);
+			
+		}else if(e.getSource().equals(usersButton)) {
+			System.out.println("USER BUTTON CLICKED");
 		}
 	}
 }

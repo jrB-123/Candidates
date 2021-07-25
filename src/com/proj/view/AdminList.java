@@ -35,9 +35,7 @@ public class AdminList extends JPanel{
 		middlePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		middlePanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 		
-		this.add(middlePanel, BorderLayout.CENTER);
-		System.out.println("Hello");
-		
+		this.add(middlePanel, BorderLayout.CENTER);		
 	}
 	
 	private void renderTablePanel() {
