@@ -50,6 +50,7 @@ public class Home extends JPanel implements ActionListener { // STARTING PAGE
 		usersButton = new JButton("USER");
 		usersButton.setSize(100, 60);
 		usersButton.setLocation(150, 230);
+		usersButton.addActionListener(this);
 		this.add(usersButton);
 		
 		JLabel usersIcon = new JLabel(img);
@@ -92,6 +93,11 @@ public class Home extends JPanel implements ActionListener { // STARTING PAGE
 			
 		}else if(e.getSource().equals(usersButton)) {
 			System.out.println("USER BUTTON CLICKED");
+			
+			MainFrame.mainFrame.setSize(950, 600);
+			MainFrame.mainFrame.setResizable(true);
+			CardLayout cl = (CardLayout) MainFrame.deck.getLayout();
+			cl.show(MainFrame.deck, MainFrame.userListCard);
 		}
 	}
 }

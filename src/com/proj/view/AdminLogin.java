@@ -128,6 +128,7 @@ public class AdminLogin extends JPanel implements ActionListener {
 				
 			}else { // if incorrect
 				JOptionPane.showMessageDialog(null, "Credentials are Incorrect!"); // Pop-Up info
+				
 			}
 			pw.setText("");
 			usernameField.setText("");
