@@ -36,6 +36,7 @@ public class AdminList extends JPanel{
 		middlePanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 		
 		this.add(middlePanel, BorderLayout.CENTER);
+		System.out.println("Hello");
 		
 	}
 	
