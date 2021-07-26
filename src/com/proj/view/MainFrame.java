@@ -18,14 +18,19 @@ import javax.swing.JPanel;
 
 public class MainFrame {
 	// - - > DECLARATIONS
-	private static final long serialVersionUID = 1L;
 	public static JFrame mainFrame;
 	public static JPanel deck;
 	private Home home;
+	// - - > ADMIN SIDE
 	private AdminLogin adminLogin;
+	private AdminList adminList;
+	// - - > USER SIDE
+	private UserList userList;
 	// - - > CARD LABELS
 	public static String homeCard = "HOME";
 	public static String adminLoginCard = "ADMINLOGIN"; 
+	public static String adminListCard = "ADMINLIST";
+	public static String userListCard = "USERLIST";
 	
 	public MainFrame() {
 		mainFrame = new JFrame();
@@ -38,11 +43,15 @@ public class MainFrame {
 		// INITIALIZE CUSTOM PANELS
 		home = new Home();
 		adminLogin = new AdminLogin();
+		adminList = new AdminList();
+		userList = new UserList();
 		
 		// STACK AND ADD PAGES HERE
 		deck = new JPanel(new CardLayout()); // CARDLAYOUT AS NAVIGATION TOOL
-		deck.add(home, homeCard); 
-		deck.add(adminLogin, adminLoginCard);
+		deck.add(home, homeCard); // HOME PAGE
+		deck.add(adminLogin, adminLoginCard); // ADMIN LOGIN
+		deck.add(adminList, adminListCard); // ADMIN CANDIDATES LIST PAGE
+		deck.add(userList, userListCard); // USER LIST
 		
 		mainFrame.getContentPane().add(deck, BorderLayout.CENTER);
 		mainFrame.setVisible(true);

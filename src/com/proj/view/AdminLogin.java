@@ -1,5 +1,6 @@
 package com.proj.view;
 
+import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -121,9 +122,13 @@ public class AdminLogin extends JPanel implements ActionListener {
 			
 			if(flag) { // if correct
 				JOptionPane.showMessageDialog(null, "Credentials are Correct!"); // Pop-Up info
+				MainFrame.mainFrame.setSize(850, 500);
+				CardLayout cl = (CardLayout) MainFrame.deck.getLayout();
+				cl.show(MainFrame.deck, MainFrame.adminListCard);
 				
 			}else { // if incorrect
 				JOptionPane.showMessageDialog(null, "Credentials are Incorrect!"); // Pop-Up info
+				
 			}
 			pw.setText("");
 			usernameField.setText("");
